@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.plexapp.agents.minimalistmovieposters</string>
+	<string>com.plexapp.agents.minimalmovieposters</string>
 	<key>PlexAgentAttributionText</key>
 	<string>
-		Search for Minimalist Movie Posters
-		Based on: http://minimalmovieposters.tumblr.com/
+		Search for Minimal Movie Posters
+		Based on: http://minimalmovieposters.tumblr.com
 	</string>
 	<key>PlexFrameworkVersion</key>
 	<string>2</string>
