@@ -1,5 +1,5 @@
 MMP_ROOT = 'http://minimalmovieposters.tumblr.com'
-MMP_JSON = '%s/tagged/%%s' % MMP_ROOT
+MMP_HTML = '%s/tagged/%%s' % MMP_ROOT
 
 ####################################################################################################
 def Start():
@@ -26,7 +26,7 @@ class MMPAgent(Agent.Movies):
 		i = 0
 		valid_names = list()
 
-		html = HTML.ElementFromURL(MMP_JSON % (String.Quote(media.title, usePlus=True)))
+		html = HTML.ElementFromURL(MMP_HTML % (String.Quote(media.title, usePlus=True)))
 		posters = html.xpath('//div[@class="post"]/div[@class="photo"]/a[@class="zoom"]/@href')
 
 		for url in posters:
