@@ -26,7 +26,12 @@ class MMPAgent(Agent.Movies):
 		i = 0
 		valid_names = list()
 
-		html = HTML.ElementFromURL(MMP_HTML % (String.Quote(media.title, usePlus=True)))
+		try:
+			html = HTML.ElementFromURL(MMP_HTML % (String.Quote(media.title.lower(), usePlus=True)))
+		except:
+			Log(' >>> No results for "%s"...' % (media.title))
+			return
+
 		posters = html.xpath('//div[@class="post"]/div[@class="photo"]/a[@class="zoom"]/@href')
 
 		for url in posters:
